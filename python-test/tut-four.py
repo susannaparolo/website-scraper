@@ -6,9 +6,9 @@ search_term = input("What product do you want to search for? ")
 
 # url_morr = f"https://groceries.morrisons.com/search?entry={product}"
 
-# url = f"https://www.newegg.ca/p/pl?d={search_term}&N=4131"
-# page = requests.get(url).text
-# doc = BeautifulSoup(page, "html.parser")
+url = f"https://www.newegg.ca/p/pl?d={search_term}&N=4131"
+page = requests.get(url).text
+doc = BeautifulSoup(page, "html.parser")
 
 page_text = doc.find(class_="list-tool-pagination-text").strong
 pages = int(str(page_text).split("/")[-2].split(">")[-1][:-1])
