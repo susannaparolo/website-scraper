@@ -1,3 +1,5 @@
+
+
 document.querySelectorAll('h3') 
 const h3Nodes = document.querySelectorAll('h3');
 
