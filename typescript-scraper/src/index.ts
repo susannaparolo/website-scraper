@@ -12,9 +12,10 @@ interface ShoesData {
 
 AxiosInstance.get(url).then((response) => {
   const html = response.data;
+  console.log(response);
   const $ = cheerio.load(html);
 
-  const result = $("product-thumbnail__product-price-info").get();
+  const result = $(".product-thumbnail__product-price-info").get();
   console.log(result);
 
   const resultDiv: cheerio.Cheerio = $("div").find(

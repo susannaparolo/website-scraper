@@ -16,7 +16,6 @@ export const getShoesData = async (): Promise<ClarksResponse> => {
   const output = result.products.map(function (value, index) {
     console.log(`product: ${value.name}, rating: ${value.averageRating}`);
   });
-  console.log(output.at[0]);
   return result;
 };
 
